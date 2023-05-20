@@ -217,7 +217,13 @@ def indices_of_positive_numbers(input_list):
 
     """
 
-    pass
+    index_positive = []
+    for index, number in enumerate(input_list):
+        if number > 0:
+            index_positive.append(index)
+    return index_positive
+            
+
 
 
 def sum_repeats(input_list):
@@ -230,7 +236,16 @@ def sum_repeats(input_list):
 
     >>> sum_repeats([1, 1, 5, 1, 2, 6, 6])
     7
-
+    
     """
+    total = 0
+    for index in range (len(input_list)-1):
+        if input_list[index] == input_list[index+1]:
+            total += input_list[index]
+    return total
 
-    pass
+
+
+
+
+    
